@@ -305,7 +305,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To-Do List" id="Utl-ce-cPn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nee-lo-TO8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nee-lo-TO8">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="zJV-4S-Huy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUs-d3-YZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -341,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="387"/>
+            <point key="canvasLocation" x="1249" y="281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qCU-Pk-G7F">
