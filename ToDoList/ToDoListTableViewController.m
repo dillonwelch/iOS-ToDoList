@@ -120,4 +120,16 @@
 }
 */
 
+# pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Deselect the item.
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    // Grab the tapped item.
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    // Toggle the selected status.
+    tappedItem.completed = !tappedItem.completed;
+    // Reload the row.
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
 @end
