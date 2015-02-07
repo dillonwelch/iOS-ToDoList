@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3A296451A859D29004AA824 /* DataLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A296441A859D29004AA824 /* DataLibrary.m */; };
 		F8BB320D1A7C1F7D00C640E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB320C1A7C1F7D00C640E8 /* main.m */; };
 		F8BB32101A7C1F7D00C640E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB320F1A7C1F7D00C640E8 /* AppDelegate.m */; };
 		F8BB32131A7C1F7D00C640E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB32121A7C1F7D00C640E8 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3A296441A859D29004AA824 /* DataLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLibrary.m; sourceTree = "<group>"; };
+		A3A296461A859D3D004AA824 /* DataLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLibrary.h; sourceTree = "<group>"; };
 		F8BB32071A7C1F7D00C640E8 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB320B1A7C1F7D00C640E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BB320C1A7C1F7D00C640E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				F8BB32171A7C1F7D00C640E8 /* Images.xcassets */,
 				F8BB32191A7C1F7E00C640E8 /* LaunchScreen.xib */,
 				F8BB320A1A7C1F7D00C640E8 /* Supporting Files */,
+				A3A296441A859D29004AA824 /* DataLibrary.m */,
+				A3A296461A859D3D004AA824 /* DataLibrary.h */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				F8BB32101A7C1F7D00C640E8 /* AppDelegate.m in Sources */,
 				F8BB320D1A7C1F7D00C640E8 /* main.m in Sources */,
 				F8EA55E81A7C3CEF00BACAEA /* ToDoListTableViewController.m in Sources */,
+				A3A296451A859D29004AA824 /* DataLibrary.m in Sources */,
 				F8EA55E51A7C3C7F00BACAEA /* AddToDoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
