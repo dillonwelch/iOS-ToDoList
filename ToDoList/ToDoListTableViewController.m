@@ -16,6 +16,8 @@
 
 @end
 
+NSString * const kToDoList = @"kToDoList";
+
 @implementation ToDoListTableViewController
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -24,22 +26,32 @@
     
     if (item != nil) {
         [self.toDoItems addObject:item];
+        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:self.toDoItems];
+        [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:kToDoList];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [self.tableView reloadData];
     }
 }
 
 - (void)loadInitialData {
-    ToDoItem *item1 = [[ToDoItem alloc] init];
-    item1.itemName = @"Buy milk";
-    [self.toDoItems addObject:item1];
     
-    ToDoItem *item2 = [[ToDoItem alloc] init];
-    item2.itemName = @"Buy eggs";
-    [self.toDoItems addObject:item2];
-    
-    ToDoItem *item3 = [[ToDoItem alloc] init];
-    item3.itemName = @"Read a book";
-    [self.toDoItems addObject:item3];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kToDoList]) {
+        //self.toDoItems = [[[NSUserDefaults standardUserDefaults] arrayForKey:kToDoList] mutableCopy];
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:kToDoList];
+        self.toDoItems = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    } else {
+        ToDoItem *item1 = [[ToDoItem alloc] init];
+        item1.itemName = @"Buy milk";
+        [self.toDoItems addObject:item1];
+        
+        ToDoItem *item2 = [[ToDoItem alloc] init];
+        item2.itemName = @"Buy eggs";
+        [self.toDoItems addObject:item2];
+        
+        ToDoItem *item3 = [[ToDoItem alloc] init];
+        item3.itemName = @"Read a book";
+        [self.toDoItems addObject:item3];
+    }
 }
 
 - (void)viewDidLoad {
