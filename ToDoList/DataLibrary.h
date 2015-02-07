@@ -11,5 +11,5 @@
 #import <Foundation/Foundation.h>
 
 NSMutableArray *loadToDoList();
-
+void saveToDoList(NSMutableArray *toDoList);
 #endif

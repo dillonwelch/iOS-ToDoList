@@ -21,3 +21,9 @@ NSMutableArray *loadToDoList() {
     }
     return toDoItems;
 }
+
+void saveToDoList(NSMutableArray *toDoList) {
+    NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:toDoList];
+    [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:kToDoList];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}

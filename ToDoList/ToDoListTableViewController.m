@@ -17,8 +17,6 @@
 
 @end
 
-NSString * const kt = @"kToDoList";
-
 @implementation ToDoListTableViewController
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -27,9 +25,7 @@ NSString * const kt = @"kToDoList";
     
     if (item != nil) {
         [self.toDoItems addObject:item];
-        NSData *dataSave = [NSKeyedArchiver archivedDataWithRootObject:self.toDoItems];
-        [[NSUserDefaults standardUserDefaults] setObject:dataSave forKey:kt];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        saveToDoList(self.toDoItems);
         [self.tableView reloadData];
     }
 }
