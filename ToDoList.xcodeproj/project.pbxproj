@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A3A296451A859D29004AA824 /* DataLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A296441A859D29004AA824 /* DataLibrary.m */; };
+		A3A296481A8EE141004AA824 /* ToDoItemCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A296471A8EE141004AA824 /* ToDoItemCase.m */; };
+		A3A296541A8EE601004AA824 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A296531A8EE601004AA824 /* libOCMock.a */; };
 		F8BB320D1A7C1F7D00C640E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB320C1A7C1F7D00C640E8 /* main.m */; };
 		F8BB32101A7C1F7D00C640E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB320F1A7C1F7D00C640E8 /* AppDelegate.m */; };
 		F8BB32131A7C1F7D00C640E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BB32121A7C1F7D00C640E8 /* ViewController.m */; };
@@ -33,6 +35,17 @@
 /* Begin PBXFileReference section */
 		A3A296441A859D29004AA824 /* DataLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLibrary.m; sourceTree = "<group>"; };
 		A3A296461A859D3D004AA824 /* DataLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLibrary.h; sourceTree = "<group>"; };
+		A3A296471A8EE141004AA824 /* ToDoItemCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItemCase.m; sourceTree = "<group>"; };
+		A3A2964A1A8EE5AA004AA824 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		A3A2964B1A8EE5AA004AA824 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		A3A2964C1A8EE5AA004AA824 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		A3A2964D1A8EE5AA004AA824 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		A3A2964E1A8EE5AA004AA824 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		A3A2964F1A8EE5AA004AA824 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		A3A296501A8EE5AA004AA824 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		A3A296511A8EE5AA004AA824 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		A3A296521A8EE5AA004AA824 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		A3A296531A8EE601004AA824 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = lib/libOCMock.a; sourceTree = "<group>"; };
 		F8BB32071A7C1F7D00C640E8 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB320B1A7C1F7D00C640E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BB320C1A7C1F7D00C640E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,15 +79,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A296541A8EE601004AA824 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3A296491A8EE5AA004AA824 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				A3A2964A1A8EE5AA004AA824 /* NSNotificationCenter+OCMAdditions.h */,
+				A3A2964B1A8EE5AA004AA824 /* OCMArg.h */,
+				A3A2964C1A8EE5AA004AA824 /* OCMConstraint.h */,
+				A3A2964D1A8EE5AA004AA824 /* OCMLocation.h */,
+				A3A2964E1A8EE5AA004AA824 /* OCMMacroState.h */,
+				A3A2964F1A8EE5AA004AA824 /* OCMock.h */,
+				A3A296501A8EE5AA004AA824 /* OCMockObject.h */,
+				A3A296511A8EE5AA004AA824 /* OCMRecorder.h */,
+				A3A296521A8EE5AA004AA824 /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		F8BB31FE1A7C1F7D00C640E8 = {
 			isa = PBXGroup;
 			children = (
+				A3A296531A8EE601004AA824 /* libOCMock.a */,
 				F8BB32091A7C1F7D00C640E8 /* ToDoList */,
 				F8BB32231A7C1F7E00C640E8 /* ToDoListTests */,
 				F8BB32081A7C1F7D00C640E8 /* Products */,
@@ -108,6 +139,7 @@
 				F8BB32191A7C1F7E00C640E8 /* LaunchScreen.xib */,
 				F8BB320A1A7C1F7D00C640E8 /* Supporting Files */,
 				A3A296441A859D29004AA824 /* DataLibrary.m */,
+				A3A296491A8EE5AA004AA824 /* OCMock */,
 				A3A296461A859D3D004AA824 /* DataLibrary.h */,
 			);
 			path = ToDoList;
@@ -125,6 +157,7 @@
 		F8BB32231A7C1F7E00C640E8 /* ToDoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				A3A296471A8EE141004AA824 /* ToDoItemCase.m */,
 				F8BB32261A7C1F7E00C640E8 /* ToDoListTests.m */,
 				F8BB32241A7C1F7E00C640E8 /* Supporting Files */,
 			);
@@ -253,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A296481A8EE141004AA824 /* ToDoItemCase.m in Sources */,
 				F8BB32271A7C1F7E00C640E8 /* ToDoListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,8 +431,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/include",
+				);
 				INFOPLIST_FILE = ToDoListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/ToDoList";
 			};
@@ -412,8 +461,23 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/include",
+				);
 				INFOPLIST_FILE = ToDoListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/ToDoList";
 			};
