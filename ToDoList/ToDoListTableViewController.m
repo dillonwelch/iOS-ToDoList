@@ -45,6 +45,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    saveToDoList(self.toDoItems);
 }
 
 #pragma mark - Table view data source
@@ -130,5 +131,7 @@
     tappedItem.completed = !tappedItem.completed;
     // Reload the row.
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    // Save the updated to-do list.
+    saveToDoList(self.toDoItems);
 }
 @end
