@@ -26,15 +26,23 @@ ToDoItem *item1;
     item1 = [[ToDoItem alloc] init];
     item1.itemName = @"Pet the cat.";
     item1.completed = NO;
+    [item1 encodeWithCoder:nsCoderMock];
 }
 
 - (void)tearDown {
     [super tearDown];
 }
 
-- (void)testExample {
-    [item1 encodeWithCoder:nsCoderMock];
+- (void)didItemNameGetEncoded {
     OCMVerify([nsCoderMock encodeObject:item1.itemName forKey: [ToDoItem itemNameKey]]);
+}
+
+- (void)didCompletedGetEncoded {
+    OCMVerify([nsCoderMock encodeBool:item1.completed forKey: [ToDoItem completedKey]]);
+}
+
+- (void)didCreationDateGetEncoded {
+    OCMVerify([nsCoderMock encodeObject:item1.creationDate forKey: [ToDoItem dateKey]]);
 }
 
 @end
