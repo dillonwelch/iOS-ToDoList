@@ -33,8 +33,8 @@ ToDoItem *item1;
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    [item1 encodeWithCoder:nsCoderMock];
+    OCMVerify([nsCoderMock encodeObject:item1.itemName forKey:@"itemName"]);
 }
 
 @end
