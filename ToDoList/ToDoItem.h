@@ -14,4 +14,8 @@
 @property BOOL completed;
 @property (readonly) NSDate *creationDate;
 
++(NSString *)itemNameKey;
++(NSString *)completedKey;
++(NSString *)dateKey;
+
 @end

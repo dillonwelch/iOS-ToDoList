@@ -34,7 +34,7 @@ ToDoItem *item1;
 
 - (void)testExample {
     [item1 encodeWithCoder:nsCoderMock];
-    OCMVerify([nsCoderMock encodeObject:item1.itemName forKey:@"itemName"]);
+    OCMVerify([nsCoderMock encodeObject:item1.itemName forKey: [ToDoItem itemNameKey]]);
 }
 
 @end
