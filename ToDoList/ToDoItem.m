@@ -30,4 +30,15 @@ static NSString* const kDateKey = @"date";
     return self;
 }
 
++(NSString *)itemNameKey{
+    return kNameKey;
+}
+
++(NSString *)completedKey{
+    return kCompletedKey;
+}
+
++(NSString *)dateKey{
+    return kDateKey;
+}
 @end
